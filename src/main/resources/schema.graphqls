@@ -1,0 +1,48 @@
+# 本
+type Book {
+
+    # ID
+    id: ID
+
+    # 名前
+    name: String
+
+    # ページ数
+    pageCount: Int
+
+    # 著者
+    author: Author
+}
+
+# 著者
+type Author {
+
+	# ID
+    id: ID
+    
+	# 苗字
+    firstName: String
+    
+    # 名前
+    lastName: String
+}
+
+# ユーザー
+type User {
+
+	# ID
+    id: ID
+    
+    # ユーザー名
+    userName: String
+}
+
+# クエリ
+type Query {
+
+	# 本の取得
+    bookById(id: ID): Book
+    
+    # ユーザーの取得
+	userById(id: ID): User    
+}
